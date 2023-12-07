@@ -1,0 +1,609 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+<!--    <GridView-->
+<!--        android:id="@+id/gridview"-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="0dp"-->
+<!--        android:layout_marginStart="1dp"-->
+<!--        android:layout_marginTop="1dp"-->
+<!--        android:layout_marginEnd="1dp"-->
+<!--        android:layout_marginBottom="1dp"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.0"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:layout_constraintVertical_bias="0.0" >-->
+<!--    </GridView>-->
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/hiragana"
+        android:contentDescription="@string/chart" />
+
+    <Button
+        android:id="@+id/buttonHira"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="2dp"
+        android:text="@string/hiragana"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/buttonKata"
+        tools:ignore="MissingConstraints,DuplicateSpeakableTextCheck" />
+
+    <Button
+        android:id="@+id/buttonKata"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="2dp"
+        android:text="@string/katakana"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:text="@string/hiragana"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageView" />
+
+    <LinearLayout
+        android:id="@+id/rowA"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView">
+
+        <Button
+            android:id="@+id/a"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="85dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:alpha="0"
+            tools:ignore="VisualLintButtonSize"
+            />
+
+        <Button
+            android:id="@+id/i"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="85dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:alpha="0"
+            tools:ignore="VisualLintButtonSize" />
+
+        <Button
+            android:id="@+id/u"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="85dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            tools:ignore="VisualLintButtonSize"
+            android:alpha="0" />
+
+        <Button
+            android:id="@+id/e"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="85dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:alpha="0"
+            tools:ignore="VisualLintButtonSize"/>
+
+        <Button
+            android:id="@+id/o"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="85dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            tools:ignore="VisualLintButtonSize"
+            android:alpha="0" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/rowK"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rowA">
+
+        <Button
+            android:id="@+id/ka"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="85dp"
+            android:layout_height="40dp"
+            tools:ignore="VisualLintButtonSize"
+            android:alpha="0" />
+
+        <Button
+            android:id="@+id/ki"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="85dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            tools:ignore="VisualLintButtonSize"
+            android:alpha="0" />
+
+        <Button
+            android:id="@+id/ku"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="85dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            tools:ignore="VisualLintButtonSize"
+            android:alpha="0" />
+
+        <Button
+            android:id="@+id/ke"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="85dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            tools:ignore="VisualLintButtonSize"
+            android:alpha="0" />
+
+        <Button
+            android:id="@+id/ko"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="85dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:alpha="0"
+            tools:ignore="VisualLintButtonSize" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/rowS"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rowK">
+
+        <Button
+            android:id="@+id/sa"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="85dp"
+            android:layout_height="40dp"
+            tools:ignore="VisualLintButtonSize"
+            android:alpha="0" />
+
+        <Button
+            android:id="@+id/shi"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="85dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            tools:ignore="VisualLintButtonSize"
+            android:alpha="0" />
+
+        <Button
+            android:id="@+id/su"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="85dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            tools:ignore="VisualLintButtonSize"
+            android:alpha="0" />
+
+        <Button
+            android:id="@+id/se"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="85dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            tools:ignore="VisualLintButtonSize"
+            android:alpha="0" />
+
+        <Button
+            android:id="@+id/so"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="85dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:alpha="0"
+            tools:ignore="VisualLintButtonSize" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/rowT"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rowS">
+
+        <Button
+            android:id="@+id/ta"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="85dp"
+            android:layout_height="40dp"
+            tools:ignore="VisualLintButtonSize"
+            android:alpha="0" />
+
+        <Button
+            android:id="@+id/chi"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="85dp"
+            android:layout_height="40dp"
+            tools:ignore="VisualLintButtonSize"
+            android:layout_weight="1"
+            android:alpha="0" />
+
+        <Button
+            android:id="@+id/tsu"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="85dp"
+            android:layout_height="40dp"
+            tools:ignore="VisualLintButtonSize"
+            android:layout_weight="1"
+            android:alpha="0" />
+
+        <Button
+            android:id="@+id/te"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="85dp"
+            android:layout_height="40dp"
+            tools:ignore="VisualLintButtonSize"
+            android:layout_weight="1"
+            android:alpha="0" />
+
+        <Button
+            android:id="@+id/to"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="85dp"
+            android:layout_height="40dp"
+            tools:ignore="VisualLintButtonSize"
+            android:layout_weight="1"
+            android:alpha="0" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/rowN"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rowT">
+
+        <Button
+            android:id="@+id/na"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="85dp"
+            android:layout_height="40dp"
+            tools:ignore="VisualLintButtonSize"
+            android:alpha="0" />
+
+        <Button
+            android:id="@+id/ni"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="85dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            tools:ignore="VisualLintButtonSize"
+            android:alpha="0" />
+
+        <Button
+            android:id="@+id/nu"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="85dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            tools:ignore="VisualLintButtonSize"
+            android:alpha="0" />
+
+        <Button
+            android:id="@+id/ne"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="85dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            tools:ignore="VisualLintButtonSize"
+            android:alpha="0" />
+
+        <Button
+            android:id="@+id/no"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="85dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:alpha="0"
+            tools:ignore="VisualLintButtonSize" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/rowH"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rowN">
+
+        <Button
+            android:id="@+id/ha"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="85dp"
+            android:layout_height="40dp"
+            android:alpha="0" />
+
+        <Button
+            android:id="@+id/hi"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="85dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            tools:ignore="VisualLintButtonSize"
+            android:alpha="0" />
+
+        <Button
+            android:id="@+id/fu"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="85dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            tools:ignore="VisualLintButtonSize"
+            android:alpha="0" />
+
+        <Button
+            android:id="@+id/he"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="85dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:alpha="0"
+            tools:ignore="VisualLintButtonSize" />
+
+        <Button
+            android:id="@+id/ho"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="85dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            tools:ignore="VisualLintButtonSize"
+            android:alpha="0" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/rowM"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rowH">
+
+        <Button
+            android:id="@+id/ma"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="85dp"
+            android:layout_height="40dp"
+            tools:ignore="VisualLintButtonSize"
+            android:alpha="0" />
+
+        <Button
+            android:id="@+id/mi"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="85dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            tools:ignore="VisualLintButtonSize"
+            android:alpha="0" />
+
+        <Button
+            android:id="@+id/mu"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="85dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            tools:ignore="VisualLintButtonSize"
+            android:alpha="0" />
+
+        <Button
+            android:id="@+id/me"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="85dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            tools:ignore="VisualLintButtonSize"
+            android:alpha="0" />
+
+        <Button
+            android:id="@+id/mo"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="85dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            tools:ignore="VisualLintButtonSize"
+            android:alpha="0" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/rowR"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rowM">
+
+        <Button
+            android:id="@+id/ra"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="85dp"
+            android:layout_height="40dp"
+            android:alpha="0"
+            tools:ignore="VisualLintButtonSize" />
+
+        <Button
+            android:id="@+id/ri"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="85dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:alpha="0"
+            tools:ignore="VisualLintButtonSize" />
+
+        <Button
+            android:id="@+id/ru"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="85dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:alpha="0"
+            tools:ignore="VisualLintButtonSize" />
+
+        <Button
+            android:id="@+id/re"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="85dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:alpha="0"
+            tools:ignore="VisualLintButtonSize" />
+
+        <Button
+            android:id="@+id/ro"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="85dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:alpha="0"
+            tools:ignore="VisualLintButtonSize" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@id/rowY"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rowR">
+
+        <Button
+            android:id="@+id/ya"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="85dp"
+            android:layout_height="40dp"
+            android:alpha="0"
+            tools:ignore="VisualLintButtonSize" />
+
+        <Button
+            android:id="@+id/empty1"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="85dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:alpha="0"
+            tools:ignore="VisualLintButtonSize" />
+
+        <Button
+            android:id="@+id/yu"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="85dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:alpha="0"
+            tools:ignore="VisualLintButtonSize" />
+
+        <Button
+            android:id="@+id/empty2"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="85dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:alpha="0"
+            tools:ignore="VisualLintButtonSize" />
+
+        <Button
+            android:id="@+id/yo"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="85dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:alpha="0"
+            tools:ignore="VisualLintButtonSize" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/wa"
+        style="?android:attr/buttonBarButtonStyle"
+        android:layout_width="85dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="3dp"
+        android:layout_weight="1"
+        android:alpha="0"
+        app:layout_constraintStart_toStartOf="@id/imageView"
+        app:layout_constraintTop_toBottomOf="@+id/rowY"
+        tools:ignore="VisualLintButtonSize" />
+
+    <Button
+        android:id="@+id/wo"
+        style="?android:attr/buttonBarButtonStyle"
+        android:layout_width="85dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="240dp"
+        android:layout_marginTop="3dp"
+        android:layout_weight="1"
+        android:alpha="0"
+        app:layout_constraintStart_toEndOf="@id/wa"
+        app:layout_constraintTop_toBottomOf="@+id/rowY"
+        tools:ignore="VisualLintButtonSize" />
+
+    <Button
+        android:id="@+id/n"
+        style="?android:attr/buttonBarButtonStyle"
+        android:layout_width="85dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="2dp"
+        android:layout_weight="1"
+        android:alpha="0"
+        app:layout_constraintStart_toStartOf="@id/imageView"
+        app:layout_constraintTop_toBottomOf="@+id/wa"
+        tools:ignore="VisualLintButtonSize" />
+
+    <!--    <GridView-->
+<!--        android:id="@+id/gridview"-->
+<!--        android:layout_width="406dp"-->
+<!--        android:layout_height="471dp"-->
+<!--        tools:layout_editor_absoluteX="0dp"-->
+<!--        tools:layout_editor_absoluteY="64dp" />-->
+
+</androidx.constraintlayout.widget.ConstraintLayout>
